@@ -1,0 +1,61 @@
+/* Dimenions (matching Fabric) */
+$screen-small-lower: 320px;
+$screen-small-upper: 479px;
+$screen-med-lower: 480px;
+$screen-med-upper: 639px;
+$screen-large-lower: 640px;
+$screen-large-upper: 1023px;
+$screen-xlarge-lower: 1024px;
+$screen-xlarge-upper: 1365px;
+$screen-xxlarge-lower: 1366px;
+$screen-xxlarge-upper: 1919px;
+$screen-xxxlarge-lower: 1920px;
+
+// defaults (medium and smaller)
+main {
+    display: grid;
+    margin: 0;
+    width: 100%;
+}
+
+// small
+@media only screen and (min-width: $screen-small-lower) {
+    main {
+        grid-template-columns: 2.5% 95% 2.5%;
+    }
+}
+
+// medium
+@media only screen and (min-width: $screen-med-lower) {
+    main {
+        grid-template-columns: 1fr 10fr 1fr;
+    }
+}
+
+// large
+@media only screen and (min-width: $screen-large-lower) {
+    main {
+        grid-template-columns: 1fr 10fr 1fr;
+    }
+}
+
+// xlarge
+@media only screen and (min-width: $screen-xlarge-lower) {
+    main {
+        grid-template-columns: 1fr $screen-large-lower 1fr;
+    }
+}
+
+// xxlarge
+@media only screen and (min-width: $screen-xxlarge-lower) {
+    main {
+        grid-template-columns: 1fr $screen-large-lower 1fr;
+    }
+}
+
+// xxxlarge
+@media only screen and (min-width: $screen-xxxlarge-lower) {
+    main {
+        grid-template-columns: 1fr $screen-large-lower 1fr;
+    }
+}

@@ -1,0 +1,14 @@
+header {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr 1fr;
+    grid-template-rows: 64px;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}

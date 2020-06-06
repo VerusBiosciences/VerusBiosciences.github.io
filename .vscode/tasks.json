@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "serve --drafts",
+            "type": "shell",
+            "command": "bundle",
+            "args": [
+                "exec",
+                "jekyll",
+                "serve",
+                "--drafts"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "serve",
+            "type": "shell",
+            "command": "bundle",
+            "args": [
+                "exec",
+                "jekyll",
+                "serve"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+    ]
+}

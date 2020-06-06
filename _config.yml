@@ -1,0 +1,40 @@
+name: Verus Biosciences
+timezone: America/Toronto
+permalink: /:year/:month/:day/:title
+encoding: utf-8
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-gist
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+paginate: 5
+paginate_path: /blog/page-:num
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+      author: "Verus Biosciences"
+  -
+    scope:
+      type: "posts"
+    values:
+      author: "Verus Biosciences"
+      layout: post
+      comments: false
+      image: /assets/img/Null.png

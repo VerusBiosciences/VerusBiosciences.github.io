@@ -1,0 +1,25 @@
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{ page.title | xml_escape }}</title>
+{% if page.excerpt %}
+    <meta name="description" content="{{page.excerpt | strip_html | truncatewords:30 | xml_escape}}">
+{% elsif page.description %}
+    <meta name="description" content="{{page.description | xml_escape}}">
+{% endif %}
+
+{% if jekyll.environment == "production" %}
+    {% seo %}
+{% endif %}
+
+<link rel="stylesheet" href="/assets/css/style.css">
+
+{% for item in page.customCSS %}
+<link rel="stylesheet" href="{{ item }}">
+{% endfor %}
+
+<script defer src="/assets/js/font-awesome.min.js"></script>
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+
+{% for item in page.customJS %}
+<script src="{{ item }}"></script>
+{% endfor %}
