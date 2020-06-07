@@ -6,15 +6,52 @@ header {
 
 nav {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    grid-template-rows: 128px;
-    width: 90%;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0 64px;
+
+    .nav-link {
+        align-items: center;
+        text-align: center;
+        margin: auto;
+    }
+    #logo {
+        float: left;
+    }
 }
 
-#logo {
-    width: 160px;
-    float: left;
+// small
+@media only screen and (min-width: $screen-small-lower) {
+    nav {
+        grid-template-columns: 50% 50%;
+        width: 100%;
+    }
+}
+
+// medium
+@media only screen and (min-width: $screen-med-lower) {
+}
+
+// large
+@media only screen and (min-width: $screen-large-lower) {
+    nav {
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        width: 90%;
+        grid-template-rows: 100px;
+        text-align: center;
+        padding: 0 64px;
+
+        #logo {
+            width: 160px;
+        }
+    }
+}
+
+// xlarge
+@media only screen and (min-width: $screen-xlarge-lower) {
+}
+
+// xxlarge
+@media only screen and (min-width: $screen-xxlarge-lower) {
+}
+
+// xxxlarge
+@media only screen and (min-width: $screen-xxxlarge-lower) {
 }
