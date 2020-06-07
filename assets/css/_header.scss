@@ -1,11 +1,7 @@
-header {
-  margin: 8px 0px 0px;
-  padding: 0;
-  width: 100%;
-}
-
 nav {
   display: grid;
+  width: 100%;
+  text-align: center;
 
   .nav-link {
     align-items: center;
@@ -22,15 +18,26 @@ nav {
     }
   }
   #logo {
-    float: left;
+    width: 160px;
   }
 }
 
 // small
 @media only screen and (min-width: $screen-small-lower) {
-  nav {
-    grid-template-columns: 50% 50%;
-    width: 100%;
+  header {
+    padding: 12px 12px 0px;
+    
+    nav {
+      grid-template-columns: 50% 50%;
+
+      #logo {
+        grid-column: 1 / span 2;
+        margin: 0 auto;
+      }
+      #spacer {
+        display: none;
+      }
+    }
   }
 }
 
@@ -40,15 +47,20 @@ nav {
 
 // large
 @media only screen and (min-width: $screen-large-lower) {
-  nav {
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    width: 90%;
-    grid-template-rows: 100px;
-    text-align: center;
-    padding: 0 64px;
+  header {
+    padding: 8px 8px 0px;
+    
+    nav {
+      grid-template-columns: 3fr 1fr 1fr 1fr;
+      grid-template-rows: 100px;
 
-    #logo {
-      width: 160px;
+      #logo {
+        grid-column: 1 / 1;
+        margin: 0;
+      }
+      #spacer {
+        display: inline;
+      }
     }
   }
 }
