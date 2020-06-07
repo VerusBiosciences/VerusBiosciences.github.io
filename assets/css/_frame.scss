@@ -11,7 +11,11 @@ $screen-xxlarge-lower: 1366px;
 $screen-xxlarge-upper: 1919px;
 $screen-xxxlarge-lower: 1920px;
 
-// defaults (medium and smaller)
+// defaults
+html, body{
+    margin: 0;
+}
+
 main {
     display: grid;
     margin: 0;
