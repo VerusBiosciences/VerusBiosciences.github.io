@@ -6,9 +6,15 @@ header {
 
 nav {
     display: grid;
-    grid-template-columns: 10fr 1fr 1fr 1fr;
-    grid-template-rows: 64px;
-    width: 100%;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 128px;
+    width: 90%;
     vertical-align: middle;
     text-align: center;
+    padding: 0 64px;
+}
+
+#logo {
+    width: 160px;
+    float: left;
 }
