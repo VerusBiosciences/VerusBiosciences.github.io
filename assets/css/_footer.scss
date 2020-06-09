@@ -1,5 +1,7 @@
 footer {
-  margin: 28px auto 0;
+  display: grid;
+  grid-gap: 16px;
+  margin: 32px auto 0;
   bottom: 0;
   width: 100%;
   background: linear-gradient(90deg, rgba(66, 66, 66, 0.95), rgba(66, 66, 66, 0.85)), url("/assets/img/footer-splash.jpg");
@@ -7,8 +9,75 @@ footer {
   background-position: center 0px;
   box-shadow: inset 0px 0px ;
 
+  p, a {
+    color: rgb(220, 220, 220);
+  }
+  
+  p, ul {
+    padding-left: 24px;
+  }
+
   p {
     margin: 0px;
-    padding: 28px;
+    padding: 24px;
+
+    &.heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 8px;
+    }
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    margin-top: 0px;
+    li {
+      padding: 8px 0px;
+    }
+  }
+
+  .copyright {
+    grid-row: 2;
+  }
+}
+
+// small
+@media only screen and (min-width: $screen-small-lower) {
+  footer {
+    grid-template-columns: 50% 50%;
+    .copyright {
+      font-size: smaller;
+      grid-column: 1 / span 2;
+    }
+  }
+}
+
+// medium
+@media only screen and (min-width: $screen-med-lower) {
+}
+
+// large
+@media only screen and (min-width: $screen-large-lower) {
+  footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .copyright {
+      grid-column: 1 / span 4;
+    }
+  }
+}
+
+// xlarge
+@media only screen and (min-width: $screen-xlarge-lower) {
+}
+
+// xxlarge
+@media only screen and (min-width: $screen-xxlarge-lower) {
+}
+
+// xxxlarge
+@media only screen and (min-width: $screen-xxxlarge-lower) {
 }
