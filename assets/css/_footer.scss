@@ -2,7 +2,10 @@ footer {
   margin: 28px auto 0;
   bottom: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(90deg, rgba(66, 66, 66, 0.95), rgba(66, 66, 66, 0.85)), url("/assets/img/footer-splash.jpg");
+  background-size: cover;
+  background-position: center 0px;
+  box-shadow: inset 0px 0px ;
 
   p {
     margin: 0px;
