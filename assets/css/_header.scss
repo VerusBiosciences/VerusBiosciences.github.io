@@ -1,3 +1,5 @@
+@import 'theme';
+
 nav {
   display: grid;
   width: 100%;
@@ -10,9 +12,10 @@ nav {
     text-transform: uppercase;
 
     a {
+      color: $primary;
       text-decoration: none;
       &:hover {
-        text-decoration: underline 4px;
+        text-decoration: underline 4px $primary;
         text-underline-offset: 12px;
       }
     }
