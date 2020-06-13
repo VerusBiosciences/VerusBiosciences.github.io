@@ -1,34 +1,39 @@
 @import 'theme';
 
-nav {
+header {
   display: grid;
-  width: 100%;
-  text-align: center;
+  grid-gap: 16px;
 
-  .nav-link {
-    align-items: center;
+  nav {
+    display: grid;
+    width: 100%;
     text-align: center;
-    margin: auto;
-    text-transform: uppercase;
-
-    a {
-      color: $primary;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline 4px $primary;
-        text-underline-offset: 12px;
+    
+    .nav-link {
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      text-transform: uppercase;
+      
+      a {
+        color: $primary;
+        text-decoration: none;
+          &:hover {
+          text-decoration: underline 4px $primary;
+          text-underline-offset: 12px;
+        }
       }
     }
-  }
-  #logo {
-    width: 160px;
+    #logo {
+      width: 160px;
+    }
   }
 }
 
 // small
 @media only screen and (min-width: $screen-small-lower) {
   header {
-    padding: 12px 12px 0px;
+    grid-template-columns: 1fr 90% 1fr;
     
     nav {
       grid-template-columns: 50% 50%;
@@ -51,7 +56,7 @@ nav {
 // large
 @media only screen and (min-width: $screen-large-lower) {
   header {
-    padding: 8px 8px 0px;
+    grid-template-columns: 1fr 60% 1fr;
     
     nav {
       grid-template-columns: 3fr 1fr 1fr 1fr;
