@@ -40,6 +40,11 @@ footer {
     }
   }
 
+  .content {
+    display: grid;
+    grid-gap: 16px;
+  }
+
   .copyright {
     grid-row: 2;
   }
@@ -48,10 +53,13 @@ footer {
 // small
 @media only screen and (min-width: $screen-small-lower) {
   footer {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 90% 1fr;
+    .content {
+      grid-template-columns: 50% 50%;
+    }
     .copyright {
       font-size: smaller;
-      grid-column: 1 / span 2;
+      grid-column: 2;
     }
   }
 }
@@ -63,9 +71,12 @@ footer {
 // large
 @media only screen and (min-width: $screen-large-lower) {
   footer {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 60% 1fr;
+    .content {
+      grid-template-columns: 50% 50%;
+    }
     .copyright {
-      grid-column: 1 / span 4;
+      grid-column: 2;
     }
   }
 }
