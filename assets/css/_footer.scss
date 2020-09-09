@@ -14,7 +14,7 @@ footer {
   }
   
   p, ul {
-    padding-left: 24px;
+    padding-left: 0px;
   }
 
   p {
@@ -24,6 +24,7 @@ footer {
     &.heading {
       font-weight: bold;
       text-transform: uppercase;
+      padding-left: 0px;
       padding-bottom: 8px;
     }
   }
@@ -52,6 +53,9 @@ footer {
 
 // xsmall
 @media only screen and (min-width: 0) {
+  .content {
+    padding: 16px;
+  }
 }
 
 // small
@@ -59,6 +63,7 @@ footer {
   footer {
     grid-template-columns: 1fr 90% 1fr;
     .content {
+      padding: 0px;
       grid-template-columns: 50% 50%;
     }
     .copyright {
