@@ -12,6 +12,10 @@ footer {
   p, a {
     color: rgb(220, 220, 220);
   }
+
+  a:hover {
+    color: $secondary;
+  }
   
   p, ul {
     padding-left: 0px;
