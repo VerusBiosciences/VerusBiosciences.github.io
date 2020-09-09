@@ -23,43 +23,40 @@ main {
 }
 
 // small
-@media only screen and (min-width: $screen-small-lower) {
+@media only screen and (min-width: 0) {
     main {
-        grid-template-columns: 2.5% 95% 2.5%;
+        grid-template-columns: 1fr 90% 1fr;
     }
 }
 
 // medium
 @media only screen and (min-width: $screen-med-lower) {
-    main {
-        grid-template-columns: 1fr 10fr 1fr;
-    }
 }
 
 // large
 @media only screen and (min-width: $screen-large-lower) {
     main {
-        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-columns: 1fr 60% 1fr;
     }
 }
 
 // xlarge
 @media only screen and (min-width: $screen-xlarge-lower) {
-    main {
-        grid-template-columns: 1fr $screen-large-lower 1fr;
-    }
+    // main {
+    //     grid-template-columns: 1fr $screen-large-lower 1fr;
+    // }
 }
 
 // xxlarge
 @media only screen and (min-width: $screen-xxlarge-lower) {
-    main {
-        grid-template-columns: 1fr $screen-large-lower 1fr;
-    }
+    // main {
+    //     grid-template-columns: 1fr $screen-large-lower 1fr;
+    // }
 }
 
 // xxxlarge
 @media only screen and (min-width: $screen-xxxlarge-lower) {
-    main {
-        grid-template-columns: 1fr $screen-large-lower 1fr;
-    }
+    // main {
+    //     grid-template-columns: 1fr $screen-large-lower 1fr;
+    // }
 }

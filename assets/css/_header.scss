@@ -25,22 +25,24 @@ header {
       }
     }
     #logo {
-      width: 160px;
+      width: 80px;
+      margin: auto 0;
     }
   }
 }
 
 // small
-@media only screen and (min-width: $screen-small-lower) {
+@media only screen and (min-width: 0) {
   header {
     grid-template-columns: 1fr 90% 1fr;
+    margin-top: 16px;
     
     nav {
       grid-template-columns: 50% 50%;
 
       #logo {
         grid-column: 1 / span 2;
-        margin: 0 auto;
+        margin: auto;
       }
       #spacer {
         display: none;
@@ -51,6 +53,9 @@ header {
 
 // medium
 @media only screen and (min-width: $screen-med-lower) {
+  #logo {
+    margin: auto 0;
+  }
 }
 
 // large
@@ -64,7 +69,7 @@ header {
 
       #logo {
         grid-column: 1 / 1;
-        margin: 0;
+        margin: auto 0;
       }
       #spacer {
         display: inline;
